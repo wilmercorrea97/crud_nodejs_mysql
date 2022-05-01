@@ -7,7 +7,6 @@ const conexion = mysql.createConnection({
     database: 'crud_nodejs_db'
 });
 
-
 conexion.connect( ( error ) => {
 
     if ( error ) {

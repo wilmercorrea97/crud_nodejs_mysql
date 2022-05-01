@@ -1,9 +1,13 @@
 // Invocar express
 const express = require('express');
+const { json } = require('express/lib/response');
 const app = express();
 
 // Invocar motor de plantillas
 app.set('view engine', 'ejs');
+
+app.use(express.urlencoded({extended:false}));
+app.use(express(json));
 
 // Invocando al router
 app.use( '/', require('./router') );
